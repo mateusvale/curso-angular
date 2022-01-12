@@ -1,29 +1,19 @@
-<section class="property-binding">
+<section class="two-way-binding">
   <article>
-    <h3>Event Binding</h3>
-
-    <button (click)="ClickMe()" 
-    class="btn btn-primary">
-        Click me!
-    </button>
-
-    <input type="text" 
-      (keyup)="onKeyUp($event)"
-      (keyup.enter)="saveValue(clickedEvent.value)"
-    #clickedEvent/>
+    <h3>Two-way data binding</h3>
     <div>
-      <p>Valor atual é: {{ valorAtual }}</p>
-      <p>Valor salvo é: {{ valorSalvo }}</p>
+      <input type="text"
+        [value]="name"
+        (input)="name = $event.target.value" 
+      />
     </div>
-    
-    <span 
-      (mouseover)="onMouseOverOut()" 
-      (mouseout)="onMouseOverOut()" 
-      [class.highlight]="onMouseOver"
-    >
-      Passe o mouse sobre mim!
-    </span>
+    <p>Você digitou: {{ name }}</p>
+    <br><br>
 
+    <input type="text" [(ngModel)]="person.name">
+    <input type="text" [(ngModel)]="person.age">
 
+    <p>Olá, meu nome é {{ person.name }} e tenho {{ person.age }} anos</p>
   </article>
+
 </section>
