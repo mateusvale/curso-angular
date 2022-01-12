@@ -1,19 +1,7 @@
-<section class="two-way-binding">
+<section class="input-output-properties">
   <article>
-    <h3>Two-way data binding</h3>
-    <div>
-      <input type="text"
-        [value]="name"
-        (input)="name = $event.target.value" 
-      />
-    </div>
-    <p>Você digitou: {{ name }}</p>
-    <br><br>
-
-    <input type="text" [(ngModel)]="person.name">
-    <input type="text" [(ngModel)]="person.age">
-
-    <p>Olá, meu nome é {{ person.name }} e tenho {{ person.age }} anos</p>
+    <h3>Input/Output Properties</h3>
   </article>
 
+  <app-curso [nome]="nomeDoCurso"></app-curso>
 </section>
