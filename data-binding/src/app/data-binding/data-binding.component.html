@@ -1,7 +1,18 @@
 <section class="input-output-properties">
   <article>
     <h3>Input/Output Properties</h3>
-  </article>
+    
+    <app-curso [nome]="nomeDoCurso"></app-curso>
+    
+    <contador [valor]="valorInicial"
+    (mudouValor)="onMudouValor($event)"
+    ></contador>
 
-  <app-curso [nome]="nomeDoCurso"></app-curso>
+    <div class="alert alert-danger" role="alert"
+      [style.display]="(valor < 20) ? 'none' : 'block'">
+      The counter reached 20!!!
+    </div>
+
+
+  </article>
 </section>
