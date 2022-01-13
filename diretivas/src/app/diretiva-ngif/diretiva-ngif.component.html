@@ -1,0 +1,26 @@
+<h5>*ngIf</h5>
+
+<div *ngIf="cursos.length == 0" >
+  Lista vazia de cursos.
+</div>
+<div *ngIf="cursos.length > 0" >
+  Lista de cursos aqui.
+</div>
+<br><br>
+
+<button (click)="curso()" class="btn btn-primary">Click!</button>
+
+<div *ngIf="mostrarCursos" >
+  {{ cursos[0] }}
+</div>
+<div *ngIf="!mostrarCursos" >
+</div>
+
+<br><br>
+
+<h5>Hidden como alternativa</h5>
+<div [hidden]="!mostrarCursos" >
+  {{ cursos[0] }}
+</div>
+<div [hidden]="mostrarCursos" >
+</div>
