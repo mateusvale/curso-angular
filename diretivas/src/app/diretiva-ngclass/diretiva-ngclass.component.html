@@ -1,0 +1,19 @@
+<div>
+  <i  class="glyphicon"
+[class.glyphicon-arrow-left]="!mostrar"
+[class.glyphicon-arrow-right]="mostrar"
+(click)="clicar()">
+  </i>
+</div>
+
+<br>
+
+<div>
+  <i  class="glyphicon"
+    [ngClass]="{
+    'glyphicon-arrow-left': !mostrar,
+    'glyphicon-arrow-right': mostrar
+    }"
+    (click)="clicar()">
+  </i>
+</div>
