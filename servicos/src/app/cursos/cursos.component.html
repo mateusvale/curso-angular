@@ -3,3 +3,8 @@
 <ul>
   <li *ngFor="let curso of cursos">{{ curso }}</li>
 </ul>
+
+<input type="text" #curso2>
+<button (click)="addCurso(curso2)">
+Adicione Curso
+</button>

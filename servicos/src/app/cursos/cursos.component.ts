@@ -15,6 +15,11 @@ export class CursosComponent implements OnInit {
 
   ngOnInit() {
     this.cursos = this.cursosService.getCursos();
+    console.log("ngOnInit chamado")
+  }
+
+  addCurso(curso){
+    this.cursosService.addCursoService(curso.value);
   }
 
 }
